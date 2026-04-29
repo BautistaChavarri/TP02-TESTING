@@ -27,7 +27,7 @@ jobs:
 
       - name: Ejecutar tests
         run: |
-          pytest --html=reporte_tests.html --self-contained-html
+          PYTHONPATH=. pytest --html=reporte_tests.html --self-contained-html
 
       - name: Subir reporte como artefacto
         uses: actions/upload-artifact@v4
